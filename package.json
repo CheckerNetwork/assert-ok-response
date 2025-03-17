@@ -1,7 +1,7 @@
 {
-  "name": "tiny-json-rpc",
+  "name": "assert-ok-response",
   "version": "1.0.0",
-  "description": "A tiny JSON RPC client",
+  "description": "A tiny helper to assert that response from `fetch()` is ok.",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CheckerNetwork/tiny-json-rpc.git"
+    "url": "git+https://github.com/CheckerNetwork/assert-ok-response.git"
   },
   "author": "",
   "license": "(Apache-2.0 AND MIT)",
   "bugs": {
-    "url": "https://github.com/CheckerNetwork/tiny-json-rpc/issues"
+    "url": "https://github.com/CheckerNetwork/assert-ok-response/issues"
   },
-  "homepage": "https://github.com/CheckerNetwork/tiny-json-rpc#readme",
+  "homepage": "https://github.com/CheckerNetwork/assert-ok-response#readme",
   "devDependencies": {
     "@types/node": "^22.13.10",
     "eslint": "^9.22.0",
