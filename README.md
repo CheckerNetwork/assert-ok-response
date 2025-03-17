@@ -34,4 +34,4 @@ Error properties:
 
 - `npm test` to run the tests.
 - `npm run lint:fix` to fix linting issues.
-- `npx np` to publish a new version
+- `npx np` to publish a new version.
