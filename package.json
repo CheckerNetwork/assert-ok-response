@@ -1,6 +1,6 @@
 {
   "name": "assert-ok-response",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A tiny helper to assert that response from `fetch()` is ok.",
   "type": "module",
   "main": "index.js",
