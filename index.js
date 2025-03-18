@@ -1,19 +1,21 @@
 /**
- * @param {string | URL} url
- * @param {object} options
- * @param {string[][] | Record<string, string | ReadonlyArray<string>> | Headers} [options.requestHeaders]
- * @param {typeof fetch} [options.fetchFn] Custom fetch function (useful for testing)
- * @param {console['log']} [options.debugLog] Debug logger
+ * @param {Response} res The Response object returned by a fetch request.
+ * @param {string} [errorMsg] An optional error message to include in the error thrown if the response is not ok.
  */
-export function createJsonRpcClient(url, { requestHeaders, fetchFn } = {}) {
-  fetchFn = fetchFn ?? fetch
+export async function assertOkResponse(res, errorMsg) {
+  if (res.ok) return
 
-  /**
-   * @param {string} method
-   * @param {[unknown]} [params]
-   */
-  const rpc = async (method, params) => {
-    // TODO
+  let body
+  try {
+    body = await res.text()
+  } catch (/** @type {any} */ err) {
+    body = `(Cannot read response body: ${err.message ?? err})`
   }
-  return rpc
+  body = body?.trimEnd()
+  const err = new Error(`${errorMsg ?? `Cannot fetch ${res.url}`} (${res.status}): ${body}`)
+  Object.assign(err, {
+    statusCode: res.status,
+    serverMessage: body,
+  })
+  throw err
 }
