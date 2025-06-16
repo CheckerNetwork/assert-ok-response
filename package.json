@@ -28,7 +28,7 @@
   ],
   "devDependencies": {
     "@types/node": "^22.15.31",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "neostandard": "^0.12.1",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
