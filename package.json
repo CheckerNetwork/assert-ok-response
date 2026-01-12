@@ -27,7 +27,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "^22.19.3",
+    "@types/node": "^22.19.5",
     "eslint": "^9.39.2",
     "neostandard": "^0.12.2",
     "prettier": "^3.7.4",
